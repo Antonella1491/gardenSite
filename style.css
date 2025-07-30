@@ -298,7 +298,6 @@ p {
 
 @media (max-width: 1000px) {
   .motiv-phrase-box {
-    min-width: 918px;
     padding-bottom: 0 !important;
 
     .motiv-img-box {
@@ -307,12 +306,7 @@ p {
   }
 
   .professional-box {
-    min-width: 900px;
     padding-top: 10px !important;
-  }
-
-  .home-contacts-box {
-    min-width: 900px;
   }
 
   .column-phrase {
@@ -474,7 +468,7 @@ footer small {
   }
 
   .footer-link {
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 15px;
 
   }
@@ -491,10 +485,6 @@ footer small {
   .link-box {
     display: flex;
     flex-direction: column;
-  }
-
-    #footer-container {
-    min-width: 900px;
   }
 }
 
@@ -831,11 +821,5 @@ footer small {
   .carousel img {
     max-width: 90%;
     height: 150px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .welcome_container {
-    min-width: 903px;
   }
 }
