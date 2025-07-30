@@ -252,7 +252,6 @@ h2 {
 
   .quality-box {
     padding-left: 0;
-    padding-right: 0;
 
     h2 {
       margin-left: 15px;
@@ -637,9 +636,6 @@ footer small {
 }
 
 @media (max-width: 1000px) {
-  .myInfo_box {
-    min-width: 918px;
-  }
 
   .img-box {
     display: flex;
@@ -724,20 +720,9 @@ footer small {
 }
 
 @media (max-width: 1000px) {
-  .contacts_container {
-    min-width: 918px;
-  }
-
-  .contacts-container {
-    min-width: 918px;
-  }
 
   .info-label {
     text-align: center;
-  }
-
-  .maps-contacts-box {
-    min-width: 918px;
   }
 }
 
