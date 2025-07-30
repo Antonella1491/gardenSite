@@ -1,0 +1,841 @@
+/* Stili generali */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+}
+
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+
+
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+/* Slide down */
+.slide-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  /* Parte più in alto */
+  transition: all 0.8s ease-out;
+}
+
+.slide-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Torna alla posizione naturale */
+}
+
+/* Homepage (hero section) */
+/* Hero Section */
+.welcome_container,
+.homepage {
+  max-width: 100%;
+  height: 70vh;
+  /* Imposta l'altezza dell'hero per coprire tutta la finestra */
+  background-image: url('Img/Giardino.jpg');
+  /* Cambia l'immagine di sfondo se necessario */
+  background-size: cover;
+  /* Assicurati che l'immagine di sfondo si adatti */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  /* Centra orizzontalmente il contenuto */
+  align-items: center;
+  /* Centra verticalmente il contenuto */
+  text-align: center;
+  position: relative;
+}
+
+.welcome_container {
+  .overlay {
+    padding: 20px;
+    max-width: 1000px;
+    /* Limita la larghezza massima */
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    padding-top: 90px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #45a049;
+    text-shadow:
+      -1px -1px 0 #2f5d2a,
+      1px -1px 0 #2f5d2a,
+      -1px 1px 0 #2f5d2a,
+      1px 1px 0 #2f5d2a;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 30px;
+    padding-top: 5px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .welcome_container h1 {
+    font-size: 30px;
+    /* Riduce la dimensione del testo su schermi più piccoli */
+  }
+}
+
+.home-contacts-box {
+  background-color: #fff;
+  font-size: 20px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+
+  p {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+}
+
+.contacts-box {
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.contact-btn {
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.contact-btn:hover {
+  color: #fff;
+  background-color: #45a049;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 55px;
+  color: #3d913b;
+  margin-top: 60px;
+  margin-left: 25px;
+}
+
+.quality-box {
+  padding-left: 50px;
+  padding-top: 30px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 55px;
+    color: #3d913b;
+    margin-top: 20px;
+  }
+
+  ul {
+    color: #3d913b;
+    margin-left: 30px;
+    margin-top: 50px;
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      padding-left: 50px;
+      margin-bottom: 15px;
+      font-size: 25px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 35px 35px;
+    }
+
+    li:nth-child(1) {
+      background-image: url('Img/Icone-home/icons8-fiducia-50.png');
+      /* Prima icona */
+    }
+
+    li:nth-child(2) {
+      background-image: url('Img/Icone-home/icons8-puntuale-50.png');
+      /* Seconda icona */
+    }
+
+    li:nth-child(3) {
+      background-image: url('Img/Icone-home/icons8-casa-50.png');
+      /* Terza icona */
+    }
+
+    li:nth-child(4) {
+      background-image: url('Img/Icone-home/icons8-creatività-50.png');
+      /* Quarta icona */
+    }
+
+    li:nth-child(5) {
+      background-image: url('Img/Icone-home/icons8-cuore-50.png');
+      /* Quinta icona */
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .quality-img {
+    padding-left: 0;
+  }
+
+  .quality-box {
+    padding-left: 0;
+    padding-right: 0;
+
+    h2 {
+      margin-left: 15px;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    li {
+      padding-left: 0px;
+    }
+  }
+
+  .home-contacts-box {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .contact_row {
+    padding-bottom: 0 !important;
+  }
+
+  .second_contact_row {
+    padding-top: 0 !important;
+  }
+}
+
+p {
+  text-align: center;
+  color: #333;
+}
+
+.motiv-phrase {
+  font-size: 35px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+  .motiv-phrase-box {
+    min-width: 918px;
+    padding-bottom: 0 !important;
+
+    .motiv-img-box {
+      margin-right: 15px;
+    }
+  }
+
+  .professional-box {
+    min-width: 900px;
+    padding-top: 10px !important;
+  }
+
+  .home-contacts-box {
+    min-width: 900px;
+  }
+
+  .column-phrase {
+    order: 2;
+  }
+
+  .motiv-img-box {
+    order: 1;
+  }
+
+  .motiv-phrase {
+    padding-top: 30px;
+  }
+}
+
+/* Navbar */
+
+@media (max-width: 1000px) {
+  .navbar-toggler {
+    margin-right: 0px;
+  }
+}
+
+.navbar .nav-link {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3d913b !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #2f5d2a !important;
+}
+
+/* Stile immagine del giardiniere */
+.profile-img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Stile per il form */
+button {
+  padding: 12px;
+  background-color: #3a6b35;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #2f5d2a;
+}
+
+/* Stile footer */
+.footer {
+  position: relative;
+  background-image: url('Img/img-footer.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  /* Imposta l'altezza fissa per il footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Overlay del footer */
+.footer-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Opacità scura sopra l'immagine */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Assicura che l'overlay copra tutta l'altezza */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Link del footer */
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #3d913b;
+}
+
+.footer-link:focus {
+  outline: 2px solid #3d913b;
+  /* Aggiunto focus per accessibilità */
+}
+
+/* Icone social */
+.social-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.social-icon img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover img.hover {
+  opacity: 1;
+}
+
+.social-icon:hover img.default {
+  opacity: 0;
+}
+
+/* Aggiunto effetto hover sulle icone social */
+.social-icon:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Testo copyright */
+footer small {
+  color: rgba(255, 255, 255, 0.7);
+  /* Colore più chiaro per il copyright */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  /* Ombreggiatura per migliore leggibilità */
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 1000px) {
+
+  .footer {
+    height: 350px;
+  }
+
+  .footer-overlay {
+    padding: 20px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+    padding-top: 15px;
+
+  }
+
+  .social-icon img {
+    height: 20px;
+  }
+
+  .footer-overlay .mb-3 {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .link-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+    #footer-container {
+    min-width: 900px;
+  }
+}
+
+/* Sezione Servizi - Miglioramenti per l'immagine */
+#servizi .col-md-6 img {
+  max-width: 100%;
+  /* Assicura che l'immagine occupi tutta la larghezza del contenitore */
+  height: auto;
+  /* Mantiene la proporzione dell'immagine */
+  object-fit: cover;
+  /* Adatta l'immagine senza deformarla, ma riempiendo tutto lo spazio disponibile */
+  border-radius: 8px;
+  /* Aggiungi bordi arrotondati, se lo desideri */
+}
+
+/* Pagina Servizi */
+
+.service_container {
+  h1 {
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 0 !important;
+  }
+}
+
+.service_container .overlay {
+  padding: 100px 20px 20px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(61, 145, 59, 0.3);
+  height: 100%;
+  color: #fff;
+
+}
+
+.service {
+  max-width: 100%;
+  height: 450px;
+  /* 100% dell'altezza della finestra */
+  background-image: url('Img/giardino-servizi.jpg');
+  /* Cambia il percorso se necessario */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  color: white;
+  /* Colore del testo */
+  text-align: center;
+  /* Allinea il testo al centro */
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .service_container {
+    min-width: 918px;
+  }
+
+  .card_container {
+    min-width: 918px;
+  }
+
+  .service-contacts-box {
+    min-width: 918px;
+    min-height: 400px;
+  }
+
+
+  .service-contacts {
+    display: flex;
+    justify-content: center;
+    padding-left: 25px !important;
+
+  }
+
+  .contact-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card-row {
+  margin-left: 80px;
+  margin-right: 80px;
+
+  .card {
+    gap: 30px;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 100px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      color: #5dba47;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}
+
+.service-contacts {
+  padding-left: 100px;
+
+  p {
+    font-size: 64px;
+    color: #3d913b;
+  }
+}
+
+.service-contacts-box {
+  background-color: #fff;
+  height: 300px !important;
+}
+
+.ico-phone {
+  margin-right: 5px;
+}
+
+/*My Info*/
+
+.myInfo {
+  h1 {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+}
+
+.myInfo-box {
+  text-align: start;
+}
+
+.info-contact {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .myInfo_box {
+    min-width: 918px;
+  }
+
+  .img-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .myInfo {
+    padding-left: 30px !important;
+  }
+}
+
+/*Pagina contatti*/
+
+.contacts_container {
+  max-width: 100%;
+  height: 450px;
+  /* 100% dell'altezza della finestra */
+  background-image: url('Img/2191090-foglie-verdi-nel-giardino-gratuito-foto.jpg');
+  /* Cambia il percorso se necessario */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  color: white;
+  /* Colore del testo */
+  text-align: center;
+  /* Allinea il testo al centro */
+  position: relative;
+
+  h1 {
+    font-size: 80px;
+    margin-bottom: 0;
+  }
+
+  .overlay {
+    padding: 100px 20px 20px 20px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    color: #fff;
+  }
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  &:hover {
+    background-color: #f0f5ff;
+    transform: scale(1.2);
+    /* Ingrandisce del 20% */
+    color: #28a745;
+  }
+
+  .label-contact {
+    color: #3d913b;
+    font-size: 25px;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .info-label {
+    color: #333;
+    font-size: 30px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contacts_container {
+    min-width: 918px;
+  }
+
+  .contacts-container {
+    min-width: 918px;
+  }
+
+  .info-label {
+    text-align: center;
+  }
+
+  .maps-contacts-box {
+    min-width: 918px;
+  }
+}
+
+.service-contacts-box {
+  height: 600px;
+}
+
+.mappa-banner {
+  max-width: 100%;
+  height: 400px;
+  border: none;
+  overflow: hidden;
+
+  iframe {
+    max-width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+/* Stile del tasto "scroll to top" */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 0px;
+  /* Distanza dal fondo della pagina */
+  left: 20px;
+  /* Distanza dal lato destro della pagina */
+  background-color: #3d913b;
+  /* Colore di sfondo verde */
+  color: white;
+  /* Colore del testo */
+  border: none;
+  border-radius: 50%;
+  max-width: 50px;
+  /* Dimensione del tasto */
+  height: 50px;
+  /* Dimensione del tasto */
+  font-size: 24px;
+  /* Dimensione della freccia */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effetto hover sul tasto */
+.scroll-to-top-btn:hover {
+  background-color: #2b6f2a;
+  /* Colore di sfondo al passaggio del mouse */
+  transform: scale(1.1);
+  /* Leggero ingrandimento del tasto */
+}
+
+/* Nascondi il tasto quando la pagina è in cima */
+#scrollToTop {
+  display: none;
+}
+
+
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-link {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .welcome_container h1 {
+    font-size: 32px;
+  }
+
+  .carousel img {
+    max-width: 90%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .welcome_container {
+    min-width: 903px;
+  }
+}
