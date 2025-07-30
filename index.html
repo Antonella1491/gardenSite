@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Link al tuo CSS personalizzato -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 
 <body>
@@ -75,9 +76,29 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="Project.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="chatbot.js"></script>
 
   <!-- Footer -->
   <div id="footer-container"></div>
+
+  <!--Inizio Chatbot-->
+   <button id="chatButton" class="chat-icon" aria-label="Apri chat">
+    <img src="Img/icons8-chatbot-100.png">
+  </button>
+
+  <div id="chatWindow" class="chat-window" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+    <div class="chat-header">
+      <span id="chatTitle" class="chatTitle">Il tuo esperto di giardinaggio - Consulenza rapida
+      </span>
+      <button id="closeChat" class="closeChat" aria-label="Chiudi chat">
+        <img src="Img/icons8-eliminare-64.png">
+      </button>
+    </div>
+    <div id="chatBox" class="chat-box" tabindex="0"></div>
+    <textarea id="userInput" placeholder="Scrivi qui..." aria-label="Messaggio"></textarea>
+    <button id="sendBtn">Invia</button>
+  </div>
+  <!--Fine Chatbot-->
 </body>
 
 <!--Scroll to top-->
