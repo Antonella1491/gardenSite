@@ -299,10 +299,6 @@ p {
 @media (max-width: 1000px) {
   .motiv-phrase-box {
     padding-bottom: 0 !important;
-
-    .motiv-img-box {
-      margin-right: 15px;
-    }
   }
 
   .professional-box {
@@ -543,17 +539,19 @@ footer small {
 }
 
 @media (max-width: 1000px) {
-  .service_container {
-    min-width: 918px;
-  }
 
   .card_container {
-    min-width: 918px;
+    .card-row {
+      margin-left: 20px;
+      margin-right: 20px;
+    .card {
+      margin-bottom: 40px;
+    }
+    }
   }
 
   .service-contacts-box {
-    min-width: 918px;
-    min-height: 400px;
+    min-height: 480px;
   }
 
 
