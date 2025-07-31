@@ -295,6 +295,15 @@ p {
   font-style: italic;
 }
 
+.navbar-toggler {
+  img {
+    width: 20px;
+    &:hover {
+    content: url('Img/Icone-home/icons8-menu-50.png');
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .motiv-phrase-box {
     padding-bottom: 0 !important;
@@ -322,9 +331,6 @@ p {
 @media (max-width: 1000px) {
   .navbar-toggler {
     margin-right: 0px;
-    img:hover {
-    content: url('Img/Icone-home/icons8-menu-50.png');
-    }
   }
 }
 
