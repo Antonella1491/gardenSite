@@ -136,6 +136,16 @@ body {
   }
 }
 
+.btn:focus {
+  outline: 2px solid #2f5d2a;
+  box-shadow: none;
+}
+
+a:focus-visible {
+   outline: 2px solid #2f5d2a;
+   border-radius: 2px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
   .welcome_container h1 {
@@ -428,6 +438,9 @@ button:hover {
 .social-icon {
   position: relative;
   display: inline-block;
+  &:focus-visible {
+  outline: 2px solid #3d913b;
+  }
 }
 
 .social-icon img.hover {

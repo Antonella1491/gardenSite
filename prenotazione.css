@@ -8,6 +8,24 @@ body {
     padding: 0;
 }
 
+input:focus {
+   outline: 2px solid #2f5d2a;
+   border-radius: 2px;
+} 
+
+textarea:focus {
+   outline: 2px solid #2f5d2a;
+   border-radius: 2px;
+}
+
+button:focus {
+    outline: 2px solid #2f5d2a;
+}
+
+a:focus {
+    outline: 2px solid #2f5d2a;
+}
+
 .container-fluid {
     height: 100vh;
     background-image: url('Img/Natura.jpg');
