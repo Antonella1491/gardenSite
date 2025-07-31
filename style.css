@@ -478,7 +478,7 @@ footer small {
   }
 
   .social-icon img {
-    height: 35px;
+    height: 30px;
   }
 
   .footer-overlay .mb-3 {
@@ -649,10 +649,12 @@ footer small {
   .img-box {
     display: flex;
     justify-content: center;
+    order: 1;
   }
 
   .myInfo {
     padding-left: 30px !important;
+    order: 2;
   }
 }
 
