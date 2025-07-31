@@ -31,6 +31,12 @@ body {
             text-align: center;
             color: #4CAF50;
         }
+
+        .info-label {
+            color: #555;
+            font-size: 12px;
+            font-style: italic;
+        }
     }
 }
 
@@ -56,7 +62,8 @@ form {
         font-size: 16px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        &::placeholder{
+
+        &::placeholder {
             font-style: italic;
         }
     }
@@ -208,6 +215,7 @@ a {
 @media (max-width: 1000px) {
     .buttons-container {
         flex-direction: column;
+
         button {
             margin-bottom: 15px;
         }
