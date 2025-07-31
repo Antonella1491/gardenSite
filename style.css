@@ -142,8 +142,8 @@ body {
 }
 
 a:focus-visible {
-   outline: 2px solid #2f5d2a;
-   border-radius: 2px;
+  outline: 2px solid #2f5d2a;
+  border-radius: 2px;
 }
 
 /* Mobile Responsiveness */
@@ -308,8 +308,9 @@ p {
 .navbar-toggler {
   img {
     width: 20px;
+
     &:hover {
-    content: url('Img/Icone-home/icons8-menu-50.png');
+      content: url('Img/Icone-home/icons8-menu-50.png');
     }
   }
 }
@@ -438,8 +439,9 @@ button:hover {
 .social-icon {
   position: relative;
   display: inline-block;
+
   &:focus-visible {
-  outline: 2px solid #3d913b;
+    outline: 2px solid #3d913b;
   }
 }
 
@@ -565,9 +567,10 @@ footer small {
     .card-row {
       margin-left: 20px;
       margin-right: 20px;
-    .card {
-      margin-bottom: 40px;
-    }
+
+      .card {
+        margin-bottom: 40px;
+      }
     }
   }
 

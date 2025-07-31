@@ -90,7 +90,7 @@ form {
         margin: 28px 10px 0px;
 
         &:disabled {
-            background-color: #7c7b7b;
+            background-color: #a4a3a3;
             cursor: not-allowed;
         }
     }
