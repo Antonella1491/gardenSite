@@ -3,6 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description"
+    content="Giardiniere professionista a domicilio: servizi di cura, progettazione e manutenzione giardini a Cosenza e provincia. Passione, affidabilità e creatività per il tuo spazio verde.">
+  <meta name="keywords"
+    content="giardiniere, giardinaggio, Cosenza, manutenzione giardini, progettazione giardini, servizi giardinaggio, verde, piante, prato, potatura, cura giardini">
+  <meta name="author" content="Cosimo Cosentino">
+  <meta property="og:title" content="Giardiniere Cosentino - Il tuo giardino la mia passione">
+  <meta property="og:description"
+    content="Servizi professionali di giardinaggio a Cosenza. Cura, progettazione e manutenzione del verde.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Img/acero.jpg">
+  <meta property="og:url" content="https://tuosito.it/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giardiniere Cosentino - Il tuo giardino la mia passione</title>
   <!-- Link al CSS di Bootstrap -->
@@ -13,20 +24,28 @@
 </head>
 
 <body>
+
   <!-- Header -->
   <div id="header-container"></div>
 
-  <!-- Sezione Homepage (Hero Section) -->
-  <div class="homepage welcome_container">
-    <div class="overlay">
-      <div class="text-center slide-up">
-        <h1>La bellezza del verde, a portata di mano!<br></h1>
-        <p>La mia esperienza per il tuo spazio esterno.</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="container-fluid py-5 bg-white motiv-phrase-box">
+  <!-- HERO MODERNO -->
+  <section class="hero-section d-flex align-items-center justify-content-center text-center"
+    style="min-height:100vh; background: url('Img/acero.jpg') center/cover no-repeat; position:relative;">
+    <div class="hero-overlay position-absolute w-100 h-100" style="background:rgba(34,60,36,0.55); top:0; left:0;">
+    </div>
+    <div class="container position-relative" style="z-index:2;">
+      <h1 class="display-2 font-weight-bold text-white mb-4 animate__animated animate__fadeInDown"
+        style="text-shadow:0 4px 24px #222a;">Il tuo giardino, la mia passione</h1>
+      <p class="lead text-white mb-5 animate__animated animate__fadeInUp"
+        style="font-size:1.5rem; text-shadow:0 2px 8px #222a;">Progettazione, cura e creatività per spazi verdi unici a
+        Napoli e provincia.</p>
+      <a href="Servizi.html" class="btn btn-lg btn-success px-5 py-3 shadzow-lg animate__animated animate__fadeInUp"
+        style="font-size:1.3rem; border-radius:40px; font-weight:bold;">Scopri i servizi</a>
+    </div>
+  </section>
+
+  <div class="container-fluid py-5 bg-white motiv-phrase-box fade-up">
     <div class="row">
       <!-- Colonna per il testo -->
       <div class="col-lg-6 mb-3 d-flex justify-content-start column-phrase">
@@ -34,23 +53,25 @@
       </div>
       <!-- Colonna per l'immagine -->
       <div class="col-lg-6 mb-3 d-flex justify-content-end motiv-img-box">
-        <img src="Img/acero.jpg" alt="Acero" class="img-fluid slide-in-right" role="presentation">
+        <img src="Img/acero.jpg" alt="Foglia di acero decorativa" class="img-fluid slide-in-right" role="img"
+          aria-label="Foglia di acero decorativa" loading="lazy">
       </div>
     </div>
   </div>
-  <div class="container-fluid py-5 bg-white professional-box">
+  <div class="container-fluid py-5 bg-white professional-box fade-up">
     <div class="row ml-0">
       <!-- Colonna per l'immagine -->
       <div class="col-lg-6 col-12 mb-3 d-flex justify-content-center quality-img">
-        <img src="Img/foglia.jpg" alt="foglia" class="img-fluid slide-in-left" role="presentation">
+        <img src="Img/foglia.jpg" alt="Foglia verde" class="img-fluid slide-in-left" role="img"
+          aria-label="Foglia verde" loading="lazy">
       </div>
       <!-- Colonna per il testo -->
       <div class="col-lg-6 col-12 mb-3 quality-box">
-        <h2 class="slide-in-right">Un professionista <br class="mobile-hide"> per il tuo giardino</h2>
+        <h2 class="slide-in-right">Un professionista <span class="mobile-hide"><br></span> per il tuo giardino</h2>
         <!-- Lista sotto il titolo -->
         <ul class="slide-in-right">
-          <li>Affidabilità</li>
-          <li>Puntualità</li>
+          <li><strong>Affidabilità</strong></li>
+          <li><strong>Puntualità</strong></li>
           <li>Direttamente a casa tua</li>
           <li>Creatività</li>
           <li>Passione</li>
@@ -60,11 +81,10 @@
   </div>
 
   <!-- Sezione Contatti -->
-  <div class="container-fluid home-contacts-box slide-down">
+  <div class="container-fluid home-contacts-box fade-up">
     <p class="text-center">Per prenotare una consulenza o chiedere informazioni, non esitate a contattarmi.</p>
     <div class="text-center">
-      <a class="btn contact-btn" href="Prenotazione.html" target="_blank" role="button"
-        aria-label="Richiedi un appuntamento. Cliccando si aprirà una nuova pagina del broswer">
+      <a class="btn contact-btn" href="Prenotazione.html" role="button">
         Richiedi un appuntamento
       </a>
     </div>
@@ -105,6 +125,48 @@
     <button id="sendBtn">Invia</button>
   </div>
   <!--Fine Chatbot-->
+  <script>
+    // Dark mode toggle compatibile con inserimento nel footer
+    function setupDarkModeToggle() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      if (!darkModeToggle) return;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedMode = localStorage.getItem('darkMode');
+      if (savedMode === 'dark' || (!savedMode && prefersDark)) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.setAttribute('aria-pressed', 'true');
+        darkModeToggle.innerText = '☀️';
+      }
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        darkModeToggle.setAttribute('aria-pressed', isDark);
+        darkModeToggle.innerText = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
+      });
+    }
+    // Attendi che il footer sia caricato
+    function waitForFooterToggle() {
+      if (document.getElementById('darkModeToggle')) {
+        setupDarkModeToggle();
+      } else {
+        setTimeout(waitForFooterToggle, 100);
+      }
+    }
+    waitForFooterToggle();
+  </script>
+  <script>
+    // Fade-in per immagini lazy load
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+      // Se già caricata (cache)
+      if (img.complete) {
+        img.classList.add('loaded');
+      }
+    });
+  </script>
 </body>
 
 </html>

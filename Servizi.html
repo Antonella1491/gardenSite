@@ -14,8 +14,8 @@
   <!-- Header -->
   <div id="header-container"></div>
 
-  <!-- Sezione Hero -->
-  <div class="service service_container">
+  <!-- Sezione Hero (ancora per one-page) -->
+  <div id="hero" class="service service_container">
     <div class="overlay d-flex justify-content-center align-items-center">
       <div class="text-center slide-up">
         <h1>Servizi</h1>
@@ -23,41 +23,62 @@
     </div>
   </div>
 
-  <!-- Sezione Servizi -->
-  <div class="container-fluid py-5 bg-white slide-in-right card_container">
-    <div class="row d-flex justify-content-between card-row">
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center px-3">
-        <img src="Img/Icone-Servizi/icons8-tecnologia-verde-48.png" alt="Progettazione">
-        <p>Progettazione</p>
+  <!-- Sezione Elenco Servizi (ancorabile) -->
+  <section id="elenco-servizi" class="container-fluid py-5 bg-white fade-up">
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-tecnologia-verde-48.png" alt="Progettazione" class="service-icon mb-3">
+          <h3>Progettazione</h3>
+          <p>Ideazione e progettazione di giardini, terrazzi e spazi verdi personalizzati, con attenzione a estetica e funzionalità.</p>
+        </div>
       </div>
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center px-3">
-        <img src="Img/Icone-Servizi/icons8-guanti-48.png" alt="Manutenzione aree verdi">
-        <p>Manutenzione<br>piccole e grandi aree verdi</p>
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-guanti-48.png" alt="Manutenzione aree verdi" class="service-icon mb-3">
+          <h3>Manutenzione</h3>
+          <p>Manutenzione ordinaria e straordinaria di piccole e grandi aree verdi, per un giardino sempre curato e sano.</p>
+        </div>
       </div>
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center px-3">
-        <img src="Img/Icone-Servizi/icons8-germoglio-48.png" alt="Realizzazioni aree verdi">
-        <p>Realizzazioni di aree verdi</p>
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-germoglio-48.png" alt="Realizzazioni aree verdi" class="service-icon mb-3">
+          <h3>Realizzazioni</h3>
+          <p>Realizzazione di nuove aree verdi, aiuole, siepi e impianti di prato, con materiali e tecniche di qualità.</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-irrigazione-100.png" alt="Impianti di irrigazione" class="service-icon mb-3">
+          <h3>Irrigazione</h3>
+          <p>Installazione e manutenzione di impianti di irrigazione efficienti e su misura per ogni spazio verde.</p>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-sostenibilità-48.png" alt="Tree climbing e potature" class="service-icon mb-3">
+          <h3>Tree climbing & Potature</h3>
+          <p>Potature in quota, abbattimenti controllati e tree climbing per la sicurezza e la salute delle piante.</p>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100 text-center p-4">
+          <img src="Img/Icone-Servizi/icons8-giardiniere-64.png" alt="Consulenza" class="service-icon mb-3">
+          <h3>Consulenza</h3>
+          <p>Consulenza tecnica e progettuale per valorizzare al meglio il tuo spazio verde, anche da remoto.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="row d-flex justify-content-between card-row">
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center">
-        <img src="Img/Icone-Servizi/icons8-irrigazione-100.png" alt="Impianti di irrigazione">
-        <p>Impianti di irrigazione</p>
-      </div>
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center">
-        <img src="Img/Icone-Servizi/icons8-sostenibilità-48.png" alt="Tree climbing e potature">
-        <p>Tree climbing<br>Potature ed abbattimenti</p>
-      </div>
-      <div class="col-12 col-lg-3 card d-flex justify-content-center align-items-center">
-        <img src="Img/Icone-Servizi/icons8-giardiniere-64.png" alt="Consulenza">
-        <p>Consulenza</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sezione Contatti -->
-  <div class="container-fluid service-contacts-box pb-5 slide-in-left">
+  <!-- Sezione Contatti (ancorabile) -->
+  <div id="contatti" class="container-fluid service-contacts-box pb-5 slide-in-left">
     <div class="row pt-5">
       <div class="col-12 col-lg-8 service-contacts d-flex justify-content-center align-items-center">
         <p>Rendi il tuo giardino magnifico.</p>
@@ -86,3 +107,31 @@
 </button>
 
 </html>
+<script>
+  function setupDarkModeToggle() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (!darkModeToggle) return;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.setAttribute('aria-pressed', 'true');
+      darkModeToggle.innerText = '☀️';
+    }
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      darkModeToggle.setAttribute('aria-pressed', isDark);
+      darkModeToggle.innerText = isDark ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
+    });
+  }
+  function waitForFooterToggle() {
+    if (document.getElementById('darkModeToggle')) {
+      setupDarkModeToggle();
+    } else {
+      setTimeout(waitForFooterToggle, 100);
+    }
+  }
+  waitForFooterToggle();
+</script>

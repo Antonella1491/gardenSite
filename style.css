@@ -1,9 +1,176 @@
+/* --- SERVIZI PAGE MODERNA --- */
+.service-card {
+  background: linear-gradient(135deg, #f8f9fa 80%, #e9fbe5 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #3d913b11;
+  transition: transform 0.18s cubic-bezier(.23,1.01,.32,1), box-shadow 0.18s, background 0.18s;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.service-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 32px #3d913b33;
+  background: linear-gradient(135deg, #e9fbe5 60%, #f8f9fa 100%);
+  z-index: 2;
+}
+.service-card h3 {
+  color: #3d913b;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.service-card p {
+  color: #222;
+  font-size: 1.08em;
+}
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5em;
+  filter: drop-shadow(0 2px 8px #3d913b22);
+  transition: filter 0.2s;
+}
+.service-card:hover .service-icon {
+  filter: drop-shadow(0 4px 16px #3d913b44) brightness(1.1);
+}
+@media (max-width: 600px) {
+  .service-card {
+    min-height: 220px;
+    padding: 1.2em 0.7em;
+  }
+  .service-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+/* Animazione comparsa chatbot e scroll-to-top */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.chat-window, #chatButton, #scrollToTop {
+  animation: popIn 0.7s cubic-bezier(.23,1.01,.32,1);
+}
+/* Animazione hover su bottoni e link */
+.btn, button, .contact-btn {
+  transition: transform 0.18s cubic-bezier(.23,1.01,.32,1), box-shadow 0.18s;
+}
+.btn:hover, button:hover, .contact-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 4px 16px 0 #3d913b22;
+  z-index: 2;
+}
+a:hover {
+  text-decoration: underline wavy #3d913b;
+}
+/* Animazione fade-up per le sezioni */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+
+/* Animazione pulsante dark mode */
+#darkModeToggle {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  padding: 0.6em 1.1em;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 #0001;
+}
+#darkModeToggle:active {
+  box-shadow: 0 0 0 4px #ffe06655;
+  background: #ffe06622;
+}
+@media (max-width: 600px) {
+  #darkModeToggle {
+    padding: 0.5em 0.9em;
+    font-size: 1.1rem;
+  }
+}
+/* Lazy loading immagini: fade-in */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Focus visivo accessibile per bottoni e input */
+button:focus, textarea:focus, input:focus {
+  outline: 2px solid #3d913b !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #ffe06644;
+}
 /* Stili generali */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   margin: 0;
   padding: 0;
+  color: #222;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #181a1b;
+  color: #f4f4f9;
+}
+
+.dark-mode .bg-white {
+  background-color: #23272b !important;
+}
+
+.dark-mode .motiv-phrase,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode ul,
+.dark-mode p {
+  color: #f4f4f9 !important;
+}
+
+.dark-mode .btn-outline-dark {
+  color: #f4f4f9;
+  border-color: #f4f4f9;
+}
+
+.dark-mode .btn-outline-dark:hover {
+  background: #333;
+  color: #ffe066;
+}
+
+img, .img-fluid {
+  transition: filter 0.4s;
+}
+.dark-mode img, .dark-mode .img-fluid {
+  filter: brightness(0.85) contrast(1.1);
 }
 
 @keyframes slideUp {
