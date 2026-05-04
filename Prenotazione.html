@@ -5,13 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appuntamento con il Giardiniere</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="prenotazione.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_green.css">
 </head>
 
 <body>
-  <div class="container-fluid">
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="bg-white py-2">
+    <ol class="breadcrumb container">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Prenotazione</li>
+    </ol>
+  </nav>
+
+  <!-- Sezione Form Prenotazione -->
+  <div class="form-section py-5">
     <div class="container date-box">
       <h1>Richiedi un Appuntamento</h1>
       <form id="form">
@@ -37,34 +51,17 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
   <script src="prenotazione.js"></script>
+  
+  <!-- JS Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="Project.js"></script>
 </body>
 
+<!--Scroll to top-->
+<button id="scrollToTop" class="scroll-to-top-btn" aria-label="Torna a inizio pagina">
+  <img src="Img/icons8-su-30.png">
+</button>
+
 </html>
-<script>
-  function setupDarkModeToggle() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    if (!darkModeToggle) return;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
-      document.body.classList.add('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', 'true');
-      darkModeToggle.innerText = '☀️';
-    }
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', isDark);
-      darkModeToggle.innerText = isDark ? '☀️' : '🌙';
-      localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-    });
-  }
-  function waitForFooterToggle() {
-    if (document.getElementById('darkModeToggle')) {
-      setupDarkModeToggle();
-    } else {
-      setTimeout(waitForFooterToggle, 100);
-    }
-  }
-  waitForFooterToggle();
-</script>

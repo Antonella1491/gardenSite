@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    flatpickr("#data", {
+    const flatpickrInstance = flatpickr("#data", {
         dateFormat: "Y-m-d",
         minDate: "today",
         locale: "it",
         disableMobile: true
     });
+
+    // Apri il calendario quando si clicca sull'icona
+    const calendarButton = document.getElementById('calendar-button');
+    if (calendarButton) {
+        calendarButton.addEventListener('click', function() {
+            flatpickrInstance.open();
+        });
+    }
 
     const continuaBtn = document.getElementById('continua-btn');
     const form = document.getElementById('form');
