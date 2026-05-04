@@ -1,9 +1,17 @@
 <div id="modale-conferma" class="modale" style="display:none;">
   <div class="modale-contenuto" style="position: relative;">
     <button class="chiudi-modale" aria-label="Chiudi">&times;</button>
-    <h2>Conferma appuntamento</h2>
+    <div class="modale-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <h2>Conferma Appuntamento</h2>
     <p>Sei sicuro di voler inviare la tua richiesta di appuntamento?</p>
-    <button id="annulla-btn">Annulla</button>
-    <button id="conferma-btn">Conferma</button>
+    <div class="modale-buttons">
+      <button id="annulla-btn" class="btn-secondary">Annulla</button>
+      <button id="conferma-btn" class="btn-primary">Conferma</button>
+    </div>
   </div>
 </div>
