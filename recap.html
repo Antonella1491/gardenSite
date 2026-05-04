@@ -5,62 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recap Appuntamento</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="prenotazione.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            <h1>Riepilogo dei dati inseriti</h1>
+    <!-- Header -->
+    <div id="header-container"></div>
 
-            <p><strong>Nome:</strong> <span id="nome"></span></p>
-            <p><strong>Email:</strong> <span id="email"></span></p>
-            <p><strong>Data dell'appuntamento:</strong> <span id="data"></span></p>
-            <p><strong>Messaggio:</strong> <span id="messaggio"></span></p>
-
-            <p class="info-label">
-                Una volta ricevuta la tua mail, provvederemo a contattarti tempestivamente. <br> I tempi di risposta
-                abituali
-                sono entro 24 ore.
-            </p>
-
-            <div class="buttons-container">
-                <button onclick="window.location.href='Prenotazione.html';">Indietro</button>
-                <a id="mail-link" class="button-link" href="#">Invia via email</a>
+    <!-- Sezione Hero -->
+    <div class="prenotazione_container">
+        <div class="overlay d-flex justify-content-center align-items-center">
+            <div class="text-center slide-up">
+                <h1>Riepilogo</h1>
             </div>
         </div>
     </div>
 
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-white py-2">
+        <ol class="breadcrumb container">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="Prenotazione.html">Prenotazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Riepilogo</li>
+        </ol>
+    </nav>
 
+    <!-- Sezione Recap -->
+    <div class="form-section py-5 bg-white">
+        <div class="container recap-box">
+            <h1>Riepilogo dei dati inseriti</h1>
+
+            <div class="recap-card">
+                <div class="recap-item">
+                    <span class="recap-label">Nome:</span>
+                    <span class="recap-value" id="nome"></span>
+                </div>
+                <div class="recap-item">
+                    <span class="recap-label">Email:</span>
+                    <span class="recap-value" id="email"></span>
+                </div>
+                <div class="recap-item">
+                    <span class="recap-label">Data dell'appuntamento:</span>
+                    <span class="recap-value" id="data"></span>
+                </div>
+                <div class="recap-item">
+                    <span class="recap-label">Messaggio:</span>
+                    <span class="recap-value" id="messaggio"></span>
+                </div>
+            </div>
+
+            <div class="info-alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <p>Una volta ricevuta la tua mail, provvederemo a contattarti tempestivamente. <br> I tempi di risposta abituali sono entro 24 ore.</p>
+            </div>
+
+            <div class="buttons-container">
+                <button class="btn-secondary" onclick="window.location.href='Prenotazione.html';">Indietro</button>
+                <a id="mail-link" class="btn-primary button-link" href="#">Invia via email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Project.js"></script>
     <script src="recap.js"></script>
 </body>
 
+<!--Scroll to top-->
+<button id="scrollToTop" class="scroll-to-top-btn" aria-label="Torna a inizio pagina">
+    <img src="Img/icons8-su-30.png">
+</button>
+
 </html>
-<script>
-    function setupDarkModeToggle() {
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        if (!darkModeToggle) return;
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const savedMode = localStorage.getItem('darkMode');
-        if (savedMode === 'dark' || (!savedMode && prefersDark)) {
-            document.body.classList.add('dark-mode');
-            darkModeToggle.setAttribute('aria-pressed', 'true');
-            darkModeToggle.innerText = '☀️';
-        }
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            darkModeToggle.setAttribute('aria-pressed', isDark);
-            darkModeToggle.innerText = isDark ? '☀️' : '🌙';
-            localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-        });
-    }
-    function waitForFooterToggle() {
-        if (document.getElementById('darkModeToggle')) {
-            setupDarkModeToggle();
-        } else {
-            setTimeout(waitForFooterToggle, 100);
-        }
-    }
-    waitForFooterToggle();
-</script>
