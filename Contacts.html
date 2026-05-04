@@ -23,55 +23,100 @@
     </div>
   </div>
 
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="bg-white py-2">
+    <ol class="breadcrumb container">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contatti</li>
+    </ol>
+  </nav>
+
   <!-- Sezione Contatti -->
   <div class="container-fluid py-5 bg-white contacts-container">
-    <div class="row pb-5 contact_row">
-      <div class="col-lg-6 col-12">
-        <div class="contact-box">
-          <img src="Img/Icone-contatti/icons8-cornetta-del-telefono-50.png" alt="telefono">
-          <a class="label-contact" href="tel:+393404587010">Telefono</a>
-          <a class="info-label" href="tel:+393404587010">+39 3404587010</a>
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-label">Mettiti in Contatto</span>
+        <h2>Come Raggiungermi</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row pb-5 contact_row">
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <img src="Img/Icone-contatti/icons8-cornetta-del-telefono-50.png" alt="telefono">
+            </div>
+            <h4 class="contact-title">Telefono</h4>
+            <a class="contact-info" href="tel:+393404587010">+39 3404587010</a>
+            <p class="contact-description">Chiamami direttamente per informazioni</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <img src="Img/Icone-contatti/icons8-nuovo-messaggio-100.png" alt="email">
+            </div>
+            <h4 class="contact-title">Email</h4>
+            <a class="contact-info" href="mailto:cosi.cosentino90@gmail.com">cosi.cosentino90@gmail.com</a>
+            <p class="contact-description">Scrivimi per un preventivo</p>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6 col-12">
-        <div class="contact-box">
-          <img src="Img/Icone-contatti/icons8-nuovo-messaggio-100.png" alt="email">
-          <a class="label-contact" href="mailto:cosi.cosentino90@gmail.com">Email</a>
-          <a class="info-label" href="mailto:cosi.cosentino90@gmail.com">cosi.cosentino90@gmail.com</a>
+      <div class="row second_contact_row">
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper whatsapp">
+              <img src="Img/Icone-contatti/icons8-whatsapp-50.png" alt="whatsapp">
+            </div>
+            <h4 class="contact-title">Whatsapp</h4>
+            <a class="contact-info" href="https://wa.me/393404587010" target="_blank">+39 3404587010</a>
+            <p class="contact-description">Messaggiami su WhatsApp</p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row pt-5 mb-5 second_contact_row">
-      <div class="col-lg-6 col-12">
-        <div class="contact-box">
-          <img src="Img/Icone-contatti/icons8-whatsapp-50.png" alt="whatsapp">
-          <a class="label-contact" href="https://wa.me/393404587010" target="_blank">Whatsapp</a>
-          <a class="info-label" href="https://wa.me/393404587010" target="_blank">+39 3404587010</a>
-        </div>
-      </div>
-      <div class="col-lg-6 col-12">
-        <div class="contact-box">
-          <img src="Img/Icone-contatti/icons8-google-maps-nuovo-50.png" alt="maps">
-          <a class="label-contact" href="https://maps.app.goo.gl/vuc6jJuv5jMJafF8A" target="_blank">Dove sono</a>
-          <a class="info-label" href="https://maps.app.goo.gl/vuc6jJuv5jMJafF8A" target="_blank">Via Metito, 16 - 80014
-            Giugliano in Campania
-            (NA)</a>
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper location">
+              <img src="Img/Icone-contatti/icons8-google-maps-nuovo-50.png" alt="maps">
+            </div>
+            <h4 class="contact-title">Dove Sono</h4>
+            <a class="contact-info" href="https://maps.app.goo.gl/vuc6jJuv5jMJafF8A" target="_blank">Via Metito, 16<br>80014 Giugliano in Campania (NA)</a>
+            <p class="contact-description">Vieni a trovarmi</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Sezione Mappa -->
-  <div class="container-fluid maps-contacts-box pl-5 pr-5">
-    <div class="row">
-      <div class="col-12">
-        <div class="mappa-banner pb-5">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2791.506379477963!2d9.178397!3d45.600467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0690a6898179%3A0x89fa4ef5e7e77c3b!2sVia%20Metito%2C%2016%2C%2080014%20Giugliano%20in%20Campania%20NA!5e0!3m2!1sit!2sit!4v1746607208114!5m2!1sit!2sit"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+  <!-- Sezione CTA -->
+  <div id="contatti" class="container-fluid service-contacts-box d-flex align-items-center">
+    <div class="row w-100">
+      <div class="col-12 col-lg-8 service-contacts d-flex justify-content-center align-items-center">
+        <p>Hai bisogno di un preventivo? Contattami subito!</p>
+      </div>
+      <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center">
+        <button class="btn contact-btn" onclick="window.location.href='tel:+393404587010'">
+          <img src="Img/icons8-telefono-50.png" alt="icona telefono" width="30" class="ico-phone">
+          Chiamami</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- Sezione Mappa -->
+  <div class="container-fluid maps-contacts-box py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-label">Trova la Strada</span>
+        <h2>Dove Mi Trovo</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="mappa-banner">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2791.506379477963!2d9.178397!3d45.600467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0690a6898179%3A0x89fa4ef5e7e77c3b!2sVia%20Metito%2C%2016%2C%2080014%20Giugliano%20in%20Campania%20NA!5e0!3m2!1sit!2sit!4v1746607208114!5m2!1sit!2sit"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -92,31 +137,3 @@
 </button>
 
 </html>
-<script>
-  function setupDarkModeToggle() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    if (!darkModeToggle) return;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
-      document.body.classList.add('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', 'true');
-      darkModeToggle.innerText = '☀️';
-    }
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', isDark);
-      darkModeToggle.innerText = isDark ? '☀️' : '🌙';
-      localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-    });
-  }
-  function waitForFooterToggle() {
-    if (document.getElementById('darkModeToggle')) {
-      setupDarkModeToggle();
-    } else {
-      setTimeout(waitForFooterToggle, 100);
-    }
-  }
-  waitForFooterToggle();
-</script>
