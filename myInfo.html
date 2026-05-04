@@ -12,62 +12,131 @@
 <body>
 
   <!-- Header -->
-
   <div id="header-container"></div>
 
-  <div class="container-fluid py-5 bg-white myInfo_box">
-    <div class="row mt-5 pt-5">
-      <!-- Colonna per il testo -->
-      <div class="col-md-6 mb-3 d-flex flex-column justify-content-start px-5 myInfo">
-        <h1>
-          Cosimo Cosentino
-        </h1>
-        <p class="myInfo-box">
-          Sono un giardiniere con 15 anni di esperienza nel creare, curare e trasformare
-          spazi verdi. La mia passione per la natura e il verde mi ha spinto a dedicarmi a questa professione, aiutando
-          le persone a rendere i loro giardini, terrazzi e spazi esterni più belli, sani e funzionali.
-          <br>
-          <br>
-          <b>I miei servizi:</b>
-          <br>
-          <b>Progettazione e realizzazione giardini:</b> Dallo sviluppo del progetto alla scelta delle piante, creando
-          soluzioni personalizzate che rispondano alle esigenze di ogni cliente.
-          <br>
-          <b>Manutenzione ordinaria e straordinaria:</b> Potatura, cura del prato, trattamenti per le piante e tutto il
-          necessario per mantenere il giardino in perfetta forma durante tutto l'anno.
-          <br>
-          <b>Restauro di giardini storici:</b> Interventi di recupero e valorizzazione di giardini e spazi verdi con
-          un'attenzione particolare alla conservazione della loro bellezza originale.
-          <br>
-          <b>Consulenza per la scelta delle piante:</b> Suggerimenti su piante adatte al clima, al terreno e
-          all'esposizione
-          solare del tuo giardino.
-          <br>
-          <br>
-          <b><em>Perché scegliere me?</em></b>
-          <br>
-          <b>Esperienza:</b> Anni di esperienza sul campo, lavorando su progetti di diversa tipologia e dimensione.
-          <br>
-          <b>Passione:</b> La mia passione per il giardinaggio si riflette in ogni lavoro che faccio. Ogni giardino è
-          un'opera
-          unica che mi piace curare con dedizione.
-          <br>
-          <b>Affidabilità:</b> Puntualità e precisione sono i miei punti di forza. Ogni progetto è completato nei tempi
-          stabiliti, senza compromessi sulla qualità.
-          <br>
-          <br>
-        </p>
-        <p class="info-contact">
-          Contattami per un primo incontro e scopri come posso aiutarti a valorizzare il tuo giardino o spazio
-          verde!
-        </p>
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="bg-white py-2">
+    <ol class="breadcrumb breadcrumb-info container">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Su di me</li>
+    </ol>
+  </nav>
+
+  <!-- Sezione Principale -->
+  <div class="container-fluid py-5 bg-white">
+    <div class="container">
+      <!-- Introduzione con Immagine -->
+      <div class="row align-items-center mb-5 intro-section">
+        <div class="col-md-5 mb-4 text-center">
+          <div class="profile-image-wrapper">
+            <img src="Img/MyInfo.jpg" alt="Cosimo Cosentino" class="img-fluid profile-image">
+            <div class="experience-badge">
+              <span class="badge-number">15+</span>
+              <span class="badge-text">Anni di Esperienza</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 mb-4">
+          <div class="intro-content">
+            <span class="intro-label">Giardiniere Professionista</span>
+            <h1 class="myinfo-title">Cosimo Cosentino</h1>
+            <p class="myinfo-intro">
+              La mia <strong>passione per la natura</strong> e il verde mi ha spinto a dedicarmi completamente a questa professione. 
+              Da oltre 15 anni aiuto le persone a <em>creare, curare e trasformare</em> i loro spazi verdi, 
+              rendendoli più belli, sani e funzionali.
+            </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Progetti Completati</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Clienti Soddisfatti</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Anni Esperienza</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sezione Servizi -->
+      <div class="section-header text-center mb-5">
+        <span class="section-label">Cosa Offro</span>
+        <h2>I Miei Servizi</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+          <div class="info-card">
+            <div class="info-card-icon">🌳</div>
+            <h3>Progettazione e Realizzazione</h3>
+            <p>Dallo sviluppo del progetto alla scelta delle piante, creando soluzioni personalizzate che rispondano alle esigenze di ogni cliente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="info-card">
+            <div class="info-card-icon">✂️</div>
+            <h3>Manutenzione</h3>
+            <p>Potatura, cura del prato, trattamenti per le piante e tutto il necessario per mantenere il giardino in perfetta forma durante tutto l'anno.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="info-card">
+            <div class="info-card-icon">🏛️</div>
+            <h3>Restauro Giardini Storici</h3>
+            <p>Interventi di recupero e valorizzazione di giardini e spazi verdi con un'attenzione particolare alla conservazione della loro bellezza originale.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="info-card">
+            <div class="info-card-icon">🌱</div>
+            <h3>Consulenza</h3>
+            <p>Suggerimenti su piante adatte al clima, al terreno e all'esposizione solare del tuo giardino.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sezione Perché Scegliermi -->
+      <div class="section-header text-center mb-4">
+        <span class="section-label">I Miei Valori</span>
+        <h2>Perché Scegliermi</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-4 mb-3">
+          <div class="value-card text-center">
+            <div class="value-icon">💼</div>
+            <h4>Esperienza</h4>
+            <p>Anni di esperienza sul campo, lavorando su progetti di diversa tipologia e dimensione.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="value-card text-center">
+            <div class="value-icon">❤️</div>
+            <h4>Passione</h4>
+            <p>La mia passione per il giardinaggio si riflette in ogni lavoro che faccio.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="value-card text-center">
+            <div class="value-icon">⭐</div>
+            <h4>Affidabilità</h4>
+            <p>Puntualità e precisione sono i miei punti di forza.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Finale -->
+      <div class="cta-box text-center">
+        <h3>Pronto a Trasformare il Tuo Giardino?</h3>
+        <p>Contattami per un primo incontro e scopri come posso aiutarti a valorizzare il tuo spazio verde!</p>
         <button class="btn contact-btn" onclick="window.location.href='Contacts.html'">
           <img src="Img/icons8-telefono-50.png" alt="icona telefono" width="30" class="ico-phone">
           Contattami</button>
-      </div>
-      <!-- Colonna per l'immagine -->
-      <div class="col-md-6 mb-3 img-box">
-        <img src="Img/MyInfo.jpg" alt="Acero" class="img-fluid">
       </div>
     </div>
   </div>
@@ -88,31 +157,3 @@
 </button>
 
 </html>
-<script>
-  function setupDarkModeToggle() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    if (!darkModeToggle) return;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
-      document.body.classList.add('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', 'true');
-      darkModeToggle.innerText = '☀️';
-    }
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      darkModeToggle.setAttribute('aria-pressed', isDark);
-      darkModeToggle.innerText = isDark ? '☀️' : '🌙';
-      localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-    });
-  }
-  function waitForFooterToggle() {
-    if (document.getElementById('darkModeToggle')) {
-      setupDarkModeToggle();
-    } else {
-      setTimeout(waitForFooterToggle, 100);
-    }
-  }
-  waitForFooterToggle();
-</script>
