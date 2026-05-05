@@ -23,10 +23,11 @@ document.getElementById('mail-link').addEventListener('click', function () {
     btn.textContent = 'Invio in corso...';
 
     emailjs.send('service_pz7nq2s', 'template_5lu41dd', {
-        nome: nome,
+        title: 'Nuovo Appuntamento',
+        name: nome,
         email: email,
-        data: data,
-        messaggio: messaggio
+        time: data,
+        message: messaggio
     })
     .then(function () {
         window.location.href = 'conferma.html';
