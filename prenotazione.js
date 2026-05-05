@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFormat: "Y-m-d",
         minDate: "today",
         locale: "it",
-        disableMobile: true
+        disableMobile: true,
+        onChange: function() {
+            verificaCampi();
+        }
     });
 
     // Apri il calendario quando si clicca sull'icona
