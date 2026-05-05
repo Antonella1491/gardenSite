@@ -270,7 +270,9 @@ body.loaded .landing-container {
 .button-icon {
     position: relative;
     z-index: 2;
-    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.4s ease;
 }
 
