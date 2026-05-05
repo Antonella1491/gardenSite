@@ -43,7 +43,10 @@
         </div>
         <label for="messaggio">Messaggio</label>
         <textarea id="messaggio" name="messaggio" placeholder="Descrivi il servizio che desideri" aria-label="Descrivi il servizio che desideri" required></textarea>
-        <button type="button" id="continua-btn" aria-label="Continua. Cliccando si aprirà una modale di conferma." disabled>Continua</button>
+        <div class="form-buttons">
+          <button type="button" id="indietro-btn" class="btn-secondary" onclick="history.back()" aria-label="Torna alla pagina precedente">Indietro</button>
+          <button type="button" id="continua-btn" aria-label="Continua. Cliccando si aprirà una modale di conferma." disabled>Continua</button>
+        </div>
       </form>
     </div>
   </div>

@@ -62,6 +62,37 @@ a:focus {
     outline: 2px solid #2f5d2a;
 }
 
+/* Navbar toggler override for Prenotazione page */
+body .navbar-toggler,
+.navbar .navbar-toggler,
+.navbar-light .navbar-toggler,
+button.navbar-toggler {
+    background: #3a6b35 !important;
+    background-color: #3a6b35 !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+body .navbar-toggler:focus,
+.navbar .navbar-toggler:focus,
+.navbar-light .navbar-toggler:focus,
+button.navbar-toggler:focus {
+    background: #3a6b35 !important;
+    background-color: #3a6b35 !important;
+    background-image: none !important;
+    box-shadow: 0 0 0 3px rgba(58, 107, 53, 0.3) !important;
+    outline: none !important;
+}
+
+body .navbar-toggler:hover,
+.navbar .navbar-toggler:hover,
+.navbar-light .navbar-toggler:hover,
+button.navbar-toggler:hover {
+    background: #2f5d2a !important;
+    background-color: #2f5d2a !important;
+    background-image: none !important;
+}
+
 /* Hero Section Prenotazione */
 
 
@@ -156,8 +187,44 @@ form {
         resize: vertical;
     }
 
+    .form-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 28px;
+        justify-content: space-between;
+    }
+
+    .form-buttons button,
+    .form-buttons .btn-secondary,
+    .form-buttons .btn-primary {
+        flex: 1;
+        margin: 0;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-secondary,
+    #indietro-btn {
+        background: #f0f0f0 !important;
+        color: #555 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .btn-secondary:hover,
+    #indietro-btn:hover {
+        background: #e0e0e0 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .btn-primary,
     #continua-btn {
-        margin: 28px 10px 0px;
+        margin-top: 0;
 
         &:disabled {
             background: linear-gradient(135deg, #a4a3a3 0%, #8a8a8a 100%);
@@ -596,7 +663,8 @@ a {
     line-height: 1.6;
 }
 
-.buttons-container {
+.buttons-container,
+.form-buttons {
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -604,7 +672,10 @@ a {
 }
 
 .buttons-container .btn-secondary,
-.buttons-container .btn-primary {
+.buttons-container .btn-primary,
+.form-buttons .btn-secondary,
+.form-buttons .btn-primary,
+.form-buttons button {
     padding: 14px 32px;
     border: none;
     border-radius: 12px;
@@ -614,27 +685,33 @@ a {
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    flex: 1;
+    margin: 0;
 }
 
-.buttons-container .btn-secondary {
+.buttons-container .btn-secondary,
+.form-buttons .btn-secondary {
     background: #f0f0f0;
     color: #555;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.buttons-container .btn-secondary:hover {
+.buttons-container .btn-secondary:hover,
+.form-buttons .btn-secondary:hover {
     background: #e0e0e0;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.buttons-container .btn-primary {
+.buttons-container .btn-primary,
+.form-buttons .btn-primary {
     background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
-.buttons-container .btn-primary:hover {
+.buttons-container .btn-primary:hover,
+.form-buttons .btn-primary:hover {
     background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
@@ -675,11 +752,20 @@ a {
         min-height: 100px;
     }
 
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
     #continua-btn {
-        margin: 24px 0 0;
+        margin: 0;
         padding: 14px 20px;
         font-size: 1rem;
-        width: 100%;
     }
 
     .calendar-wrapper {
@@ -700,12 +786,12 @@ a {
     }
 
     .flatpickr-calendar.animate.open {
-        left: 153.9375px !important;
+        left: 27.9375px !important
     }
 
     .flatpickr-calendar.arrowBottom:after {
-    border-top-color: #3d913b !important;
-    left: 269px !important;
+        border-top-color: #3d913b !important;
+        left: 274px !important;
     }
 
     .recap-box {
@@ -716,13 +802,19 @@ a {
         padding: 12px 0;
     }
 
-    .buttons-container {
+    .buttons-container,
+    .form-buttons {
         flex-direction: column;
     }
 
     .buttons-container .btn-secondary,
-    .buttons-container .btn-primary {
+    .buttons-container .btn-primary,
+    .form-buttons .btn-secondary,
+    .form-buttons .btn-primary,
+    .form-buttons button {
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -760,8 +852,12 @@ a {
         min-height: 90px;
     }
 
+    .form-buttons {
+        margin-top: 15px;
+    }
+
     #continua-btn {
-        margin: 20px 0 0;
+        margin: 0;
         padding: 12px 18px;
         font-size: 0.95rem;
     }
@@ -793,7 +889,10 @@ a {
     }
 
     .buttons-container .btn-secondary,
-    .buttons-container .btn-primary {
+    .buttons-container .btn-primary,
+    .form-buttons .btn-secondary,
+    .form-buttons .btn-primary,
+    .form-buttons button {
         padding: 12px 20px;
         font-size: 0.9rem;
     }

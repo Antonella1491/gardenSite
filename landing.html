@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giardiniere professionista a domicilio: servizi di cura, progettazione e manutenzione giardini a Napoli e provincia.">
+    <title>Giardiniere Cosentino - Benvenuto</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Particles background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="landing-container">
+        <!-- Logo Section -->
+        <div class="logo-wrapper">
+            <div class="logo-glow"></div>
+            <img src="Img/Logo.png" alt="Giardiniere Cosentino Logo" class="main-logo">
+        </div>
+
+        <!-- Text Content -->
+        <div class="content-wrapper">
+            <h1 class="main-title">
+                <span class="title-line">Il tuo giardino,</span>
+                <span class="title-line">la mia passione</span>
+            </h1>
+            <p class="subtitle">Trasforma i tuoi spazi verdi in opere d'arte naturali</p>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="index.html" class="cta-button">
+            <span class="button-text">Entra nel Sito</span>
+            <span class="button-icon">→</span>
+        </a>
+
+        <!-- Decorative Elements -->
+        <div class="leaf leaf-1">🌿</div>
+        <div class="leaf leaf-2">🍃</div>
+        <div class="leaf leaf-3">🌱</div>
+        <div class="leaf leaf-4">🌿</div>
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="bottom-text">
+        <p>Servizi professionali di giardinaggio a Napoli e provincia</p>
+    </div>
+
+    <script>
+        // Animazione entrata
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Effetto parallasse leggero al movimento del mouse
+        document.addEventListener('mousemove', (e) => {
+            const leaves = document.querySelectorAll('.leaf');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            leaves.forEach((leaf, index) => {
+                const speed = (index + 1) * 20;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                leaf.style.transform = `translate(${x}px, ${y}px) rotate(${x}deg)`;
+            });
+
+            // Logo parallasse
+            const logo = document.querySelector('.main-logo');
+            const logoX = (mouseX - 0.5) * 10;
+            const logoY = (mouseY - 0.5) * 10;
+            logo.style.transform = `translate(${logoX}px, ${logoY}px) scale(1)`;
+        });
+
+        // Animazione particelle
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            const randomDelay = Math.random() * 5;
+            const randomDuration = 15 + Math.random() * 10;
+            particle.style.animationDelay = `${randomDelay}s`;
+            particle.style.animationDuration = `${randomDuration}s`;
+        });
+    </script>
+</body>
+
+</html>
