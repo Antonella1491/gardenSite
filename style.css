@@ -1769,7 +1769,7 @@ footer small {
   }
 
   .quote-icon.close-icon {
-    right: 70px !important;
+    right: 60px !important;
   }
 
   .professional-box .container {
@@ -1837,7 +1837,7 @@ footer small {
   }
 
   .quote-icon.open {
-    left: 45px;
+    left: 40px !important;
   }
 
   .quote-icon.close-icon {
