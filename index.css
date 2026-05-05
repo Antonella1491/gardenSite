@@ -215,6 +215,8 @@ body.loaded .landing-container {
     font-size: 1.1rem;
     font-weight: 600;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     background: linear-gradient(135deg, #3d913b 0%, #4CAF50 100%);
     border: none;
     border-radius: 50px;
