@@ -2617,6 +2617,10 @@ footer small {
   height: 300px;
 }
 
+.contacts-container .container {
+  margin-top: 50px !important;
+}
+
 .mappa-banner {
   max-width: 100%;
   height: 400px;
