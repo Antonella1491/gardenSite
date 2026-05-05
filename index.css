@@ -369,8 +369,11 @@ body.loaded .landing-container {
     }
 
     .bottom-text p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         padding: 0 20px;
+        letter-spacing: 0.5px;
+        white-space: normal;
+        line-height: 1.5;
     }
 
     .logo-glow {
