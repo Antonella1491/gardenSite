@@ -1,3 +1,6 @@
+// Inizializza EmailJS
+emailjs.init('KfeKbfvg84r-kG6o0');
+
 // Otteniamo i parametri passati nell'URL
 const params = new URLSearchParams(window.location.search);
 
@@ -13,6 +16,25 @@ document.getElementById('email').textContent = email;
 document.getElementById('data').textContent = data;
 document.getElementById('messaggio').textContent = messaggio;
 
-// Prepara il link per inviare via email con i dati
-const body = `Nome: ${nome}%0AEmail: ${email}%0AData dell'appuntamento: ${data}%0AMessaggio: ${messaggio}`;
-document.getElementById('mail-link').href = `mailto:cosi.cosentino90@gmail.com?subject=Nuovo Appuntamento&body=${body}`;
+// Invia email tramite EmailJS
+document.getElementById('mail-link').addEventListener('click', function () {
+    const btn = this;
+    btn.disabled = true;
+    btn.textContent = 'Invio in corso...';
+
+    emailjs.send('service_pz7nq2s', 'template_5lu41dd', {
+        nome: nome,
+        email: email,
+        data: data,
+        messaggio: messaggio
+    })
+    .then(function () {
+        window.location.href = 'conferma.html';
+    })
+    .catch(function (error) {
+        console.error('Errore invio email:', error);
+        btn.disabled = false;
+        btn.textContent = 'Invia via email';
+        alert('Errore durante l\'invio. Riprova più tardi.');
+    });
+});

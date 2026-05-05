@@ -1001,10 +1001,6 @@ a:focus-visible {
   .contacts-container .container {
     margin-top: 20px;
   }
-
-  nav[aria-label="breadcrumb"] {
-    padding: 10px !important;
-  }
 }
 
 @media (min-width: 576px) {
