@@ -22,7 +22,7 @@ document.getElementById('mail-link').addEventListener('click', function () {
     btn.disabled = true;
     btn.textContent = 'Invio in corso...';
 
-    emailjs.send('service_pz7nq2s', 'template_iadvjet', {
+    emailjs.send('service_7co91rs', 'template_iadvjet', {
         title: 'Nuovo Appuntamento',
         name: nome,
         email: email,
