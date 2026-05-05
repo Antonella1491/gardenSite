@@ -1001,6 +1001,10 @@ a:focus-visible {
   .contacts-container .container {
     margin-top: 20px;
   }
+
+  nav[aria-label="breadcrumb"] {
+    padding: 10px !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -1770,6 +1774,10 @@ footer small {
 
   .professional-box .container {
     margin-top: 30px !important;
+  }
+
+   nav[aria-label="breadcrumb"] {
+    padding: 10px !important;
   }
 }
 
