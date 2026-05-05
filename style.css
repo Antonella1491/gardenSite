@@ -333,9 +333,6 @@ img,
   p {
     font-style: italic;
     font-size: 30px;
-
-    @media(max-width:768px) {}
-
     padding-top: 5px;
   }
 }
@@ -886,6 +883,10 @@ a:focus-visible {
   .section-header h2 {
     font-size: 1.8rem;
   }
+
+  .motiv-phrase-box .container {
+    margin-top: 30px !important;
+  } 
 }
 
 @media (max-width: 576px) {
@@ -1756,11 +1757,15 @@ footer small {
   }
 
   .quote-icon.open {
-    left: 30px;
+    left: 30px !important;
   }
 
   .quote-icon.close-icon {
-    right: 98px;
+    right: 70px !important;
+  }
+
+  .professional-box .container {
+    margin-top: 30px !important;
   }
 }
 
