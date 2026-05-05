@@ -1,5 +1,5 @@
-// Inizializza EmailJS
-emailjs.init('KfeKbfvg84r-kG6o0');
+// Inizializza EmailJS (v4)
+emailjs.init({ publicKey: 'KfeKbfvg84r-kG6o0' });
 
 // Otteniamo i parametri passati nell'URL
 const params = new URLSearchParams(window.location.search);
@@ -22,7 +22,7 @@ document.getElementById('mail-link').addEventListener('click', function () {
     btn.disabled = true;
     btn.textContent = 'Invio in corso...';
 
-    emailjs.send('service_pz7nq2s', 'template_5lu41dd', {
+    emailjs.send('service_pz7nq2s', 'template_iadvjet', {
         title: 'Nuovo Appuntamento',
         name: nome,
         email: email,
