@@ -2433,7 +2433,7 @@ footer small {
   height: 450px;
   background-image: url('Img/Hero-Contatti.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 50%;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -2611,7 +2611,17 @@ footer small {
 }
 
 /* Responsive Contacts */
+@media (max-width: 992px) {
+  .contacts_container {
+    height: 350px;
+  }
+}
+
 @media (max-width: 768px) {
+  .contacts_container {
+    height: 300px;
+  }
+
   .contacts_container h1 {
     font-size: 50px;
   }
@@ -2633,6 +2643,16 @@ footer small {
 
   .mappa-banner {
     height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contacts_container {
+    height: 250px;
+  }
+
+  .contacts_container h1 {
+    font-size: 2rem;
   }
 }
 
