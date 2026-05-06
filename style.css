@@ -337,6 +337,11 @@ img,
   }
 }
 
+.hero-description {
+  color: #fff;
+  font-size: 30px;
+}
+
 /*BREADCRUMB*/
 .breadcrumb {
   background-color: transparent;
@@ -910,6 +915,10 @@ a:focus-visible {
     border-radius: 30px !important;
   }
 
+  .hero-description {
+    font-size: 1rem;
+  }
+
   .quote-text {
     font-size: 1.2rem;
   }
@@ -1000,6 +1009,10 @@ a:focus-visible {
 
   .contacts-container .container {
     margin-top: 20px;
+  }
+
+  .contacts_container .overlay {
+    padding: 125px 20px 20px 20px !important;
   }
 }
 
@@ -1821,7 +1834,7 @@ footer small {
   }
 
   .service_container .overlay {
-    padding: 93px 10px 10px !important;
+    padding: 105px 10px 10px !important;
   }
 
   .service-card {
@@ -2467,6 +2480,7 @@ footer small {
   border: 2px solid rgba(61, 145, 59, 0.08);
   transition: all 0.4s ease;
   text-align: center;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2479,7 +2493,10 @@ footer small {
 .contact-card-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .contact-card-link:hover {
