@@ -63,10 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 confermaBtn.addEventListener('click', function () {
                     const nome = document.getElementById('nome').value;
                     const email = document.getElementById('email').value;
+                    const telefono = document.getElementById('telefono').value;
                     const data = document.getElementById('data').value;
                     const messaggio = document.getElementById('messaggio').value;
 
-                    const recapUrl = `recap.html?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&data=${encodeURIComponent(data)}&messaggio=${encodeURIComponent(messaggio)}`;
+                    const recapUrl = `recap.html?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&telefono=${encodeURIComponent(telefono)}&data=${encodeURIComponent(data)}&messaggio=${encodeURIComponent(messaggio)}`;
                     window.location.href = recapUrl;
                 });
 

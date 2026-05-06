@@ -7,12 +7,14 @@ const params = new URLSearchParams(window.location.search);
 // Estraiamo i dati dal URL
 const nome = params.get('nome');
 const email = params.get('email');
+const telefono = params.get('telefono');
 const data = params.get('data');
 const messaggio = params.get('messaggio');
 
 // Mostriamo i dati nella pagina di recap
 document.getElementById('nome').textContent = nome;
 document.getElementById('email').textContent = email;
+document.getElementById('telefono').textContent = telefono;
 document.getElementById('data').textContent = data;
 document.getElementById('messaggio').textContent = messaggio;
 
@@ -26,6 +28,7 @@ document.getElementById('mail-link').addEventListener('click', function () {
         title: 'Nuovo Appuntamento',
         name: nome,
         email: email,
+        phone: telefono,
         time: data,
         message: messaggio
     })
