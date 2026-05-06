@@ -65,11 +65,9 @@
 
     <script>
         // Animazione entrata
-        window.addEventListener('load', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('loaded');
-            setTimeout(() => {
-                document.querySelector('.bottom-text').classList.add('visible');
-            }, 1200);
+            document.querySelector('.bottom-text').classList.add('visible');
         });
 
         // Effetto parallasse leggero al movimento del mouse
