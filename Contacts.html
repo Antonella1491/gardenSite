@@ -118,8 +118,9 @@
           </div>
 
           <div class="text-center mt-4">
-            <a href="https://www.google.com/maps/search/Via+Metito+16+80014+Giugliano+in+Campania" target="_blank"
-              rel="noopener noreferrer" class="contact-btn">
+            <a href="https://maps.google.com/?q=Via+Metito+16+80014+Giugliano+in+Campania"
+              onclick="if(/Android|iPhone|iPad/i.test(navigator.userAgent)){ event.preventDefault(); window.location='geo:40.9241,14.1947?q=Via+Metito+16+80014+Giugliano+in+Campania'; setTimeout(function(){ window.location='https://maps.google.com/?q=Via+Metito+16+80014+Giugliano+in+Campania'; }, 500); }"
+              target="_blank" rel="noopener noreferrer" class="contact-btn">
               <img src="Img/Icone-contatti/icons8-google-maps-nuovo-50.png" alt="maps" class="ico-phone">
               Apri in Google Maps
             </a>
