@@ -83,14 +83,17 @@
           </a>
         </div>
         <div class="col-lg-6 col-12 mb-4">
-          <a href="https://www.google.com/maps/search/Via+Metito+16+80014+Giugliano+in+Campania" target="_blank"
-            rel="noopener noreferrer" class="contact-card-link">
+          <a href="https://maps.google.com/?q=Via+Metito+16+80014+Giugliano+in+Campania"
+            onclick="if(/Android|iPhone|iPad/i.test(navigator.userAgent)){ event.preventDefault(); window.location='geo:40.9241,14.1947?q=Via+Metito+16+80014+Giugliano+in+Campania'; setTimeout(function(){ window.location='https://maps.google.com/?q=Via+Metito+16+80014+Giugliano+in+Campania'; }, 500); }"
+            target="_blank" rel="noopener noreferrer" class="contact-card-link">
             <div class="contact-card">
               <div class="contact-icon-wrapper location">
                 <img src="Img/Icone-contatti/icons8-google-maps-nuovo-50.png" alt="maps">
               </div>
               <h4 class="contact-title">Dove Sono</h4>
-              <span class="contact-info">Via Metito, 16<br>80014 Giugliano in Campania (NA)</span>
+              <span class="contact-info">
+                Via Metito, 16<br>80014 Giugliano in Campania (NA)
+              </span>
               <p class="contact-description">Vieni a trovarmi</p>
             </div>
           </a>
