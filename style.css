@@ -1186,6 +1186,7 @@ p {
   img {
     width: 20px !important;
     filter: brightness(0) invert(1) !important;
+    padding-bottom: 1px;
 
     &:hover {
       content: url('Img/Icone-home/icons8-menu-50.png');
