@@ -562,6 +562,10 @@ nav[aria-label="breadcrumb"] {
     padding-top: 96px !important;
 }
 
+nav[aria-label="breadcrumb"].recap-breadcrumb {
+    padding-top: 0 !important;
+}
+
 .breadcrumb-item a {
     color: #3d913b;
     text-decoration: none;
