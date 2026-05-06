@@ -331,14 +331,16 @@ body.loaded .landing-container {
 /* Bottom Text */
 .bottom-text {
     position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     opacity: 0;
     transition: opacity 1s ease-out;
-    width: 100% !important;
-    text-align: center !important;
+    text-align: center;
+    padding-bottom: max(30px, env(safe-area-inset-bottom, 30px));
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bottom-text.visible {
