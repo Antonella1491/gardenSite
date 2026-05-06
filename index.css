@@ -335,10 +335,14 @@ body.loaded .landing-container {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    animation: fadeIn 1.5s ease-out 1.2s forwards;
     opacity: 0;
+    transition: opacity 1s ease-out;
     width: 100% !important;
     text-align: center !important;
+}
+
+.bottom-text.visible {
+    opacity: 1;
 }
 
 .bottom-text p {
