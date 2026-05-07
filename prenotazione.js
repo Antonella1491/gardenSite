@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
             dateFormat: "Y-m-d",
             minDate: "today",
             locale: "it",
-            disableMobile: true,
             disable: [
                 function(date) {
                     return date.getDay() === 0; // disabilita domeniche
