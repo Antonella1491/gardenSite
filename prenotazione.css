@@ -175,6 +175,12 @@ form textarea {
     z-index: 99999 !important;
 }
 
+/* Il calendario si apre sempre a destra dell'input */
+.flatpickr-calendar.arrowLeft {
+    left: auto !important;
+    right: 0 !important;
+}
+
 .flatpickr-month,
 .flatpickr-monthDropdown-months,
 .flatpickr-weekdays,
@@ -206,6 +212,13 @@ form textarea {
     border-bottom-color: #4CAF50 !important;
 }
 
+.flatpickr-calendar.arrowBottom::after,
+.flatpickr-calendar.arrowBottom::before,
+.flatpickr-calendar.arrowTop::after,
+.flatpickr-calendar.arrowTop::before {
+    left: auto !important;
+    right: 20px !important;
+}
 .calendar-wrapper {
     position: relative;
     display: flex;
@@ -816,13 +829,8 @@ nav[aria-label="breadcrumb"].recap-breadcrumb {
         height: 24px;
     }
 
-    .flatpickr-calendar.animate.open {
-        left: 27.9375px !important;
-    }
-
     .flatpickr-calendar.arrowBottom::after {
         border-top-color: #3d913b !important;
-        left: 274px !important;
     }
 
     .form-buttons,
@@ -923,12 +931,5 @@ nav[aria-label="breadcrumb"].recap-breadcrumb {
         text-align: left;
     }
 
-    .flatpickr-calendar.animate.open {
-        left: 70px !important;
-    }
 
-    .flatpickr-calendar.arrowTop:before,
-    .flatpickr-calendar.arrowTop:after {
-        left: 287px !important;
-    }
 }

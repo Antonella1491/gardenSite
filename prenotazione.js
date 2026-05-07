@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dateFormat: "Y-m-d",
             minDate: "today",
             locale: "it",
+            position: "auto right",
             disable: [
                 function(date) {
                     return date.getDay() === 0; // disabilita domeniche
@@ -54,11 +55,46 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Apri il calendario quando si clicca sull'icona
+        // Apri/chiudi il calendario quando si clicca sull'icona
         const calendarButton = document.getElementById('calendar-button');
+        let closedByButton = false;
         if (calendarButton) {
-            calendarButton.addEventListener('click', function () {
-                flatpickrInstance.open();
+            calendarButton.addEventListener('mousedown', function (e) {
+                // Se il calendario è aperto, segna che stiamo chiudendo noi
+                if (flatpickrInstance.isOpen) {
+                    closedByButton = true;
+                }
+            });
+            calendarButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (closedByButton) {
+                    closedByButton = false;
+                    flatpickrInstance.close();
+                } else {
+                    flatpickrInstance.open();
+                }
+            });
+        }
+
+        // Chiudi con Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && flatpickrInstance.isOpen) {
+                flatpickrInstance.close();
+            }
+        });
+
+        // Apri con Enter/Invio sull'input data
+        const dataInput = document.getElementById('data');
+        if (dataInput) {
+            dataInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (flatpickrInstance.isOpen) {
+                        flatpickrInstance.close();
+                    } else {
+                        flatpickrInstance.open();
+                    }
+                }
             });
         }
 
