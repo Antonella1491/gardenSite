@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             minDate: "today",
             locale: "it",
             position: "auto right",
+            disableMobile: true,
             disable: [
-                function(date) {
+                function (date) {
                     return date.getDay() === 0; // disabilita domeniche
                 }
             ],

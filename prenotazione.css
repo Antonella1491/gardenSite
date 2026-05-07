@@ -539,10 +539,8 @@ button:disabled {
     background: rgba(244, 67, 54, 0.12) !important;
     color: #c62828 !important;
     font-weight: 600;
-}
-
-.flatpickr-day.day-sunday:hover {
-    background: rgba(244, 67, 54, 0.25) !important;
+    pointer-events: none;
+    cursor: default !important;
 }
 
 /* ── 10. BREADCRUMB ─────────────────────────────────────── */
