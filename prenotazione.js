@@ -89,20 +89,58 @@ document.addEventListener("DOMContentLoaded", function () {
     const continuaBtn = document.getElementById('continua-btn');
     const form = document.getElementById('form');
 
+    const telefonoInput = document.getElementById('telefono');
+    const erroreTelefono = document.getElementById('errore-telefono');
+
+    function telefonoValido(val) {
+        // Rimuove spazi, trattini e il prefisso + per contare solo le cifre
+        const solocifre = val.replace(/[\s\-]/g, '').replace(/^\+/, '');
+        return /^[\d]{6,15}$/.test(solocifre);
+    }
+
     function verificaCampi() {
         const campiRequired = form.querySelectorAll('[required]');
         let tuttiCompilati = true;
 
         campiRequired.forEach(campo => {
-            if (!campo.value) {
+            if (!campo.value.trim()) {
                 tuttiCompilati = false;
             }
         });
+
+        // Blocca anche se il telefono non è valido
+        if (telefonoInput.value && !telefonoValido(telefonoInput.value)) {
+            tuttiCompilati = false;
+        }
 
         continuaBtn.disabled = !tuttiCompilati;
     }
 
     form.addEventListener('input', verificaCampi);
+
+    let telefonoToccato = false;
+
+    function aggiornaTelefonoErrore() {
+        const val = telefonoInput.value;
+        if (telefonoToccato && val && !telefonoValido(val)) {
+            erroreTelefono.textContent = 'Inserisci un numero di telefono valido (min. 6 cifre).';
+            telefonoInput.setAttribute('aria-invalid', 'true');
+        } else {
+            erroreTelefono.textContent = '';
+            telefonoInput.removeAttribute('aria-invalid');
+        }
+    }
+
+    telefonoInput.addEventListener('blur', () => {
+        telefonoToccato = true;
+        aggiornaTelefonoErrore();
+        verificaCampi();
+    });
+
+    telefonoInput.addEventListener('input', () => {
+        aggiornaTelefonoErrore();
+        verificaCampi();
+    });
 
     const emailInput = document.getElementById('email');
     const erroreEmail = document.getElementById('errore-email');

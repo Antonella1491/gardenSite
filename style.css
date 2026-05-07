@@ -184,12 +184,13 @@ img[loading="lazy"].loaded {
 }
 
 /* Focus visivo accessibile per bottoni e input */
-button:focus,
-textarea:focus,
-input:focus {
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible,
+select:focus-visible {
   outline: 2px solid #3d913b !important;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px #ffe06644;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
 }
 
 /* Stili generali */
@@ -426,70 +427,17 @@ img,
   transform: none;
 }
 
-.btn:focus {
-  outline: 2px solid #2f5d2a;
-
-  .ba-slider .ba-slide {
-    display: none;
-  }
-
-  .ba-slider .ba-slide.active {
-    display: block;
-  }
-
-  .work-card {
-    border-radius: 16px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 8px 30px rgba(10, 20, 10, 0.06);
-  }
-
-  .work-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .work-label {
-    position: absolute;
-    left: 18px;
-    top: 18px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-weight: 700;
-  }
-
-  .work-card {
-    position: relative;
-  }
-
-  .value-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 28px rgba(10, 20, 10, 0.06);
-  }
-
-  .value-emoji {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-
-  .value-card h4 {
-    margin-bottom: 6px;
-  }
-
-  .muted {
-    color: var(--muted, #6b6b6b);
-  }
-
-  box-shadow: none;
+.btn:focus-visible {
+  outline: 2px solid #2f5d2a !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
 }
 
 a:focus-visible {
-  outline: 2px solid #2f5d2a;
+  outline: 2px solid #2f5d2a !important;
+  outline-offset: 2px !important;
   border-radius: 2px;
+  box-shadow: none !important;
 }
 
 /* Mobile Responsiveness */
@@ -1216,6 +1164,112 @@ p {
 
 .navbar-toggler:hover {
   background-color: #2f5d2a !important;
+}
+
+/* ===== FOCUS GLOBALE - ACCESSIBILITÀ ===== */
+
+/* Navbar brand */
+.container-fluid .navbar-brand:focus,
+.container-fluid .navbar-brand:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: -4px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+  color: #2f5d2a !important;
+}
+
+/* Nav links */
+.navbar .nav-link:focus,
+.navbar .nav-link:focus-visible,
+.navbar-light .nav-link:focus,
+.navbar-light .nav-link:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+  color: #2f5d2a !important;
+}
+
+/*CTA Hero*/
+.btn-success:focus {
+  color: #fff;
+  background-color: #218838;
+  outline: 2px solid #fff !important;
+  outline-offset: 2px !important;
+}
+
+/* Contact buttons */
+.contact-btn:focus,
+.contact-btn:focus-visible {
+  outline: 3px solid #2f5d2a !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+}
+
+/* Footer links */
+.footer-links a:focus,
+.footer-links a:focus-visible,
+.footer-link:focus,
+.footer-link:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+}
+
+.footer-contact-item a:focus,
+.footer-contact-item a:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+}
+
+/* Social icons */
+.social-icon:focus,
+.social-icon:focus-visible,
+.social-icon-footer:focus,
+.social-icon-footer:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+  border-radius: 50%;
+}
+
+/* Contact card links */
+.contact-card-link:focus,
+.contact-card-link:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+  border-radius: 20px;
+}
+
+/* Scroll to top button */
+.scroll-to-top-btn:focus,
+.scroll-to-top-btn:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
+
+/*Breadcrumb*/
+.breadcrumb-item a:focus,
+.breadcrumb-item a:focus-visible {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
+}
+
+/*Form input*/
+form input:focus,
+form input:focus-visible,
+form textarea:focus {
+  outline: 3px solid #3d913b !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+  border-radius: 4px;
 }
 
 @media (max-width: 1000px) {
